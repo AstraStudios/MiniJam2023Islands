@@ -20,7 +20,7 @@ public class Sword : MonoBehaviour
         // face mouse
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        Vector3 direction = mousePosition - transform.position;
+        Vector3 direction = mousePosition - player.position;
         float angle = Vector2.SignedAngle(Vector2.right, direction);
         transform.eulerAngles = new Vector3 (0, 0, angle);
 
