@@ -5,14 +5,15 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     [SerializeField] Transform player;
-    [SerializeField] float sliceTime = .5f;
-    [SerializeField] float sliceDistance = 1f;
+    [SerializeField] float swingTime = .5f;
+    [SerializeField] float swingDistance = 1f;
 
-    private float swordSliceTimer;
+    [HideInInspector] public bool swinging = false;
+    private float startedSwingingAt;
 
     void Start()
     {
-        swordSliceTimer = 0f;
+        startedSwingingAt = 0f;
     }
 
     void Update()
@@ -28,18 +29,17 @@ public class Sword : MonoBehaviour
         // follow player
         transform.position = player.position;
 
-
-        // shoot forward on click
-        if (Input.GetMouseButtonDown(0))
+        // swinging
+        if (Input.GetMouseButtonDown(0) && !swinging) // start
         {
-            swordSliceTimer = sliceTime;
+            startedSwingingAt = Time.time;
+            swinging = true;
         }
-        if (swordSliceTimer > 0)
+        if (Time.time - startedSwingingAt >= swingTime) swinging = false; // end
+        if (swinging) // for each frame
         {
-            Vector3 forward = new Vector3(sliceDistance*Mathf.Cos(angle * Mathf.Deg2Rad), sliceDistance*Mathf.Sin(angle * Mathf.Deg2Rad), 0);
+            Vector3 forward = new Vector3(swingDistance * Mathf.Cos(angle * Mathf.Deg2Rad), swingDistance * Mathf.Sin(angle * Mathf.Deg2Rad), 0);
             transform.position += forward;
         }
-
-        swordSliceTimer -= Time.deltaTime;
     }
 }
