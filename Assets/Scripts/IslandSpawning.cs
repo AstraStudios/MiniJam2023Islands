@@ -6,7 +6,13 @@ public class IslandSpawning : MonoBehaviour
 {
     float gridSize = 10f;
     [SerializeField] List<GameObject> islandList = new List<GameObject>();
+    Grid worldGrid;
 
+
+    private void Awake()
+    {
+        worldGrid = gameObject.GetComponent<Grid>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +31,15 @@ public class IslandSpawning : MonoBehaviour
         {
             int randIsland = Random.Range(0, islandList.Count);
             Debug.Log("Spawning: " + islandList[randIsland].name + " at position: " + i);
-            float x = Mathf.Round(Random.Range(-50, 50) / gridSize) * gridSize;
-            float y = Mathf.Round(Random.Range(-50, 50) / gridSize) * gridSize;
-            Vector2 gridPos = new Vector2(x, y);
-            Instantiate(islandList[randIsland], gridPos, Quaternion.identity);
+
+            //We can move around this randomness based off how many islands etc
+            float x = Mathf.Round(Random.Range(-25, 25) / gridSize) * gridSize;
+            float y = Mathf.Round(Random.Range(-25, 25) / gridSize) * gridSize;
+            Vector3 worldPos = worldGrid.GetCellCenterWorld(new Vector3Int((int)x, (int)y, 0));
+
+            Instantiate(islandList[randIsland], worldPos, Quaternion.identity);
+
+            islandList.Remove(islandList[randIsland]);
         }
     }
 }
