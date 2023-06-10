@@ -2660,15 +2660,8 @@ MonoBehaviour:
   - {fileID: 626052322}
   - {fileID: 7934848718135016496, guid: 48705afd241724ebfb9fe66e6ce432dd, type: 3}
   - {fileID: 8609303045480786173, guid: 04c6567379a1449fdb6ce229e4139c20, type: 3}
-  spawnCords:
-  - {x: -45, y: 0}
-  - {x: -45, y: 25}
-  - {x: 45, y: 0}
-  - {x: 45, y: 25}
-  - {x: 0, y: 25}
-  - {x: 45, y: -25}
-  - {x: 0, y: -25}
-  - {x: -45, y: -25}
+  width: 5
+  height: 10
 --- !u!4 &1473808323
 Transform:
   m_ObjectHideFlags: 0
