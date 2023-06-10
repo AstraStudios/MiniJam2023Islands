@@ -32,35 +32,49 @@ public class IslandSpawning : MonoBehaviour
                 {
                     GameObject randIsland = islandList[Random.Range(0, islandList.Count)];
 
-                    GameObject islandForParent = Instantiate(randIsland, islandPosition, Quaternion.identity);
+                    GameObject islandObj = Instantiate(randIsland, islandPosition, Quaternion.identity);
 
-                    islandForParent.transform.parent = parent.transform;
+                    islandObj.transform.parent = parent.transform;
                 }
 
                 // create bridge to left (if not farthest left island)
-                Vector3 sideBridgePosition = islandPosition - new Vector3(DISTANCE_BETWEEN_X / 2, 0, 0);
-                if (!(x == -(int)(width / 2)))
+                Vector3 leftBridgePosition = islandPosition - new Vector3(DISTANCE_BETWEEN_X / 2, 0, 0);
+                if (x != -(int)(width / 2))
                 {
-                    GameObject bridgeForParent = Instantiate(sideBridge, sideBridgePosition, Quaternion.identity);
-                    bridgeForParent.transform.parent = parent.transform;
+                    GameObject bridgeObj = Instantiate(sideBridge, leftBridgePosition, Quaternion.identity);
+                    bridgeObj.transform.parent = parent.transform;
                 }
                 else
                 {
-                    GameObject barForParent = Instantiate(sideBarrier, sideBridgePosition, Quaternion.identity);
-                    barForParent.transform.parent = parent.transform;
+                    GameObject barrierObj = Instantiate(sideBarrier, leftBridgePosition, Quaternion.identity);
+                    barrierObj.transform.parent = parent.transform;
                 }
 
                 // create bridge below (if not bottom island)
                 Vector3 bottomBridgePosition = islandPosition - new Vector3(0, DISTANCE_BETWEEN_Y / 2, 0);
-                if (!(y == -(int)(height / 2)))
+                if (y != -(int)(height / 2))
                 {
-                    GameObject bridgeForParent = Instantiate(bottomBridge, bottomBridgePosition, Quaternion.identity);
-                    bridgeForParent.transform.parent = parent.transform;
+                    GameObject bridgeObj = Instantiate(bottomBridge, bottomBridgePosition, Quaternion.identity);
+                    bridgeObj.transform.parent = parent.transform;
                 }
                 else
                 {
-                    GameObject barForParent = Instantiate(bottomBarrier, bottomBridgePosition, Quaternion.identity);
-                    barForParent.transform.parent = parent.transform;
+                    GameObject barrierObj = Instantiate(bottomBarrier, bottomBridgePosition, Quaternion.identity);
+                    barrierObj.transform.parent = parent.transform;
+                }
+
+                // create barriers on right and top
+                if (x ==  width-(int)(width/2)-1)
+                {
+                    Vector3 rightBridgePosition = islandPosition + new Vector3(DISTANCE_BETWEEN_X / 2, 0, 0);
+                    GameObject barrierObj = Instantiate(sideBarrier, rightBridgePosition, Quaternion.identity);
+                    // barrierObj.transform.parent = parent.transform;
+                }
+                if (y == (int)(height / 2)-1)
+                {
+                    Vector3 aboveBridgePosition = islandPosition + new Vector3(0, DISTANCE_BETWEEN_Y / 2, 0);
+                    GameObject barrierObj = Instantiate(bottomBarrier, aboveBridgePosition, Quaternion.identity);
+                    // barrierObj.transform.parent = parent.transform;
                 }
             }
         }
