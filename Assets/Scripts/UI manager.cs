@@ -10,7 +10,7 @@ public class UImanager : GenericSingleton<UImanager>
     [SerializeField] TMP_Text resourceText;
 
     public void DisplayResources(float wood, float stone) {
-
+        resourceText.text = "Rocks: " + ResourceManager.Instance.resources["Rock"].ToString() + ", Trees: " + ResourceManager.Instance. resources["Tree"].ToString();
     }
     public void DisplayPlayerHealthBar(float health)
     {

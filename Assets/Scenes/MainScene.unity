@@ -1802,6 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1079753542}
+  resourceText: {fileID: 659449640}
 --- !u!1001 &1641481982
 PrefabInstance:
   m_ObjectHideFlags: 0

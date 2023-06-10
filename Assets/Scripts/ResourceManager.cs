@@ -5,7 +5,7 @@ using TMPro;
 
 public class ResourceManager : GenericSingleton<ResourceManager>
 {
-    private Dictionary<string, int> resources;
+    public Dictionary<string, int> resources;
     // [SerializeField] TMP_Text resourceText;
 
     void Start()
