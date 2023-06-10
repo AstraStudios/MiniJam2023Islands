@@ -878,9 +878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3b6dd1c31c3484cabae4f97ab97df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonPrefabs:
-  - {fileID: 5164677493008429453, guid: 0f39ae98d6e6442eb82d0a6ef50e64b9, type: 3}
-  - {fileID: 5036465997893236628, guid: 33e1980188a264ad28d3eb9176af420e, type: 3}
 --- !u!61 &923605983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1616,8 +1613,8 @@ MonoBehaviour:
   - {fileID: 626052322}
   - {fileID: 7934848718135016496, guid: 48705afd241724ebfb9fe66e6ce432dd, type: 3}
   - {fileID: 8609303045480786173, guid: 04c6567379a1449fdb6ce229e4139c20, type: 3}
-  sideBridge: {fileID: 6629402179994710609, guid: ca0f6ed1b9ee8fa4f9f50deed3bdb09e, type: 3}
-  bottomBridge: {fileID: 6907491673500675031, guid: 76a9e57d68508eb40aeae9f456f9e74a, type: 3}
+  sideBridge: {fileID: 261130773672832461, guid: 39c5a317ac976374ebfcfb9bbd968572, type: 3}
+  bottomBridge: {fileID: 1030471919392987522, guid: 8cbfdd8e0d9e6cf419e45e10148a235f, type: 3}
   sideBarrier: {fileID: 1419478351556133356, guid: ef6d04d86e9bc9e4492ce2969680a4f1, type: 3}
   bottomBarrier: {fileID: 1959019019009478434, guid: 560acdf4628d6f347bddd86637101a85, type: 3}
   parent: {fileID: 1213941078}

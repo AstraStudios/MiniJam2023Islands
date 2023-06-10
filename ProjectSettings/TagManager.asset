@@ -9,6 +9,7 @@ TagManager:
   - Rock
   - Tree
   - Player Sword
+  - Bridge Buy Button
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Bridge Button
+  - Bridge
   - 
   - 
   - 
