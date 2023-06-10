@@ -6,7 +6,7 @@ using TMPro;
 public class ResourceManager : GenericSingleton<ResourceManager>
 {
     private Dictionary<string, int> resources;
-    [SerializeField] TMP_Text resourceText;
+    // [SerializeField] TMP_Text resourceText;
 
     private void Awake()
     {
@@ -29,6 +29,7 @@ public class ResourceManager : GenericSingleton<ResourceManager>
 
         resources[ResourceType] += amount;
 
-        resourceText.text = "Rocks: " + resources["Rock"].ToString() + ", Trees: " + resources["Tree"].ToString();
+        UImanager.Instance.DisplayResources(resources["Tree"], resources["Rock"]);
+        // resourceText.text = "Rocks: " + resources["Rock"].ToString() + ", Trees: " + resources["Tree"].ToString();
     }
 }

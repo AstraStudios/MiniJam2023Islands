@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static List<Vector3> enemyList;
+    private int enemyId;
+
+    public float health = 50;
+
     [SerializeField] float movementSpeed = 1f;
     [SerializeField] float attackDistance = 2f;
 
@@ -12,12 +17,17 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        enemyId = enemyList.Count;
+        enemyList.Add(new Vector3(transform.position.x, transform.position.y, health));
+
         sword = gameObject.GetComponentInChildren<Sword>();
         player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
     {
+        enemyList[enemyId] = new Vector3(transform.position.x, transform.position.y, health);
+
         // movement
         if (!sword.attacking)
         {
