@@ -599,7 +599,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 8
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1324,6 +1324,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4704661894443327005, guid: d1a4eb4a4042eb142997347b3c81596d, type: 3}
   m_PrefabInstance: {fileID: 857289020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1213941078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213941079}
+  m_Layer: 0
+  m_Name: ParentIslandGen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1213941079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213941078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1220980898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +2023,7 @@ MonoBehaviour:
   bottomBridge: {fileID: 6907491673500675031, guid: 76a9e57d68508eb40aeae9f456f9e74a, type: 3}
   sideBarrier: {fileID: 1419478351556133356, guid: ef6d04d86e9bc9e4492ce2969680a4f1, type: 3}
   bottomBarrier: {fileID: 1959019019009478434, guid: 560acdf4628d6f347bddd86637101a85, type: 3}
+  parent: {fileID: 1213941078}
   width: 5
   height: 10
 --- !u!4 &1473808323
