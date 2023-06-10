@@ -99,8 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  windTime: 0.175
   swingTime: 0.5
   swingDistance: 1
+  windDistance: 0.5
   swinging: 0
 --- !u!61 &2026918270415935667
 BoxCollider2D:
