@@ -977,11 +977,11 @@ Transform:
   - {fileID: 1995149399}
   - {fileID: 1242933721}
   - {fileID: 923605980}
-  - {fileID: 1220980899}
   - {fileID: 1009861562}
   - {fileID: 1211675058}
   - {fileID: 1373017123}
   - {fileID: 149918480}
+  - {fileID: 1220980899}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2023,7 +2023,7 @@ Transform:
   m_GameObject: {fileID: 1220980898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 21.133875, y: 10.0375, z: 1}
+  m_LocalScale: {x: 21.133873, y: 10.037499, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 626052323}
@@ -2510,7 +2510,7 @@ GameObject:
   - component: {fileID: 1473808322}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2530,15 +2530,16 @@ MonoBehaviour:
   islandList:
   - {fileID: 626052322}
   - {fileID: 7934848718135016496, guid: 48705afd241724ebfb9fe66e6ce432dd, type: 3}
+  - {fileID: 8609303045480786173, guid: 04c6567379a1449fdb6ce229e4139c20, type: 3}
   spawnCords:
-  - {x: -20, y: 0}
-  - {x: -20, y: 20}
-  - {x: 20, y: 0}
-  - {x: 20, y: 20}
-  - {x: 0, y: 20}
-  - {x: 0, y: -20}
-  - {x: -20, y: -20}
-  - {x: 20, y: -20}
+  - {x: -45, y: 0}
+  - {x: -45, y: 25}
+  - {x: 45, y: 0}
+  - {x: 45, y: 25}
+  - {x: 0, y: 25}
+  - {x: 45, y: -25}
+  - {x: 0, y: -25}
+  - {x: -45, y: -25}
 --- !u!4 &1473808323
 Transform:
   m_ObjectHideFlags: 0
