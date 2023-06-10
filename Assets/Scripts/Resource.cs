@@ -10,7 +10,7 @@ public class Resource : MonoBehaviour
     {
         GameObject otherObj = other.gameObject;
 
-        if (!otherObj.CompareTag("Sword")) return;
+        if (!otherObj.CompareTag("Player Sword")) return;
         if (!otherObj.GetComponent<Sword>().swinging) return;
 
         // give player resource

@@ -8,6 +8,7 @@ TagManager:
   - Sword
   - Rock
   - Tree
+  - Player Sword
   layers:
   - Default
   - TransparentFX
