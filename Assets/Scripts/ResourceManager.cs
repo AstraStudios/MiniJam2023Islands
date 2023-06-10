@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ResourceManager : GenericSingleton<ResourceManager>
 {
     private Dictionary<string, int> resources;
+    [SerializeField] TMP_Text resourceText;
 
     void Start()
     {
@@ -22,6 +24,6 @@ public class ResourceManager : GenericSingleton<ResourceManager>
 
         resources[ResourceType] += amount;
 
-        print("Rocks: " + resources["Rock"].ToString() + ", Trees: " + resources["Tree"].ToString());
+        resourceText.text = "Rocks: " + resources["Rock"].ToString() + ", Trees: " + resources["Tree"].ToString();
     }
 }
