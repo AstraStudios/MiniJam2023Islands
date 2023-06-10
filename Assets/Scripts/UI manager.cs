@@ -6,7 +6,6 @@ using TMPro;
 
 public class UImanager : GenericSingleton<UImanager>
 {
-    [SerializeField] Image healthBar;
     [SerializeField] TMP_Text resourceText;
     RectTransform healthBar;
 
