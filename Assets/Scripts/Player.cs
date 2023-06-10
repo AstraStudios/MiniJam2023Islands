@@ -34,5 +34,9 @@ public class Player : MonoBehaviour
 
         health -= 10;
         UImanager.Instance.DisplayPlayerHealthBar(health);
+        if (health <= 0)
+        {
+            Time.timeScale = 0;
+        }
     }
 }
