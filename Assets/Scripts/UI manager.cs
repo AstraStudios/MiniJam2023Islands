@@ -23,7 +23,7 @@ public class UImanager : GenericSingleton<UImanager>
         healthBar.localScale = new Vector3(230.2151f * (health / 100f), 0.675f, 1f);
         healthBar.anchoredPosition = new Vector3(162.72185f + 230.2151f * (health / 200f), healthBar.anchoredPosition.y, 0);
     } 
-    public void DisplayEnemyHealth(List<Vector3> enemies) { } // vector 3 being (x, y, health) in world cords
+    public void DisplayEnemyHealth(List<GameObject> enemies) { }
 
     private void Update()
     {

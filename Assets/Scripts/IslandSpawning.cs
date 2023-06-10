@@ -64,17 +64,17 @@ public class IslandSpawning : MonoBehaviour
                 }
 
                 // create barriers on right and top
-                if (x ==  width-(int)(width/2)-1)
+                if (x == width-(int)(width/2)-1)
                 {
                     Vector3 rightBridgePosition = islandPosition + new Vector3(DISTANCE_BETWEEN_X / 2, 0, 0);
                     GameObject barrierObj = Instantiate(sideBarrier, rightBridgePosition, Quaternion.identity);
-                    // barrierObj.transform.parent = parent.transform;
+                    barrierObj.transform.parent = parent.transform;
                 }
                 if (y == (int)(height / 2)-1)
                 {
                     Vector3 aboveBridgePosition = islandPosition + new Vector3(0, DISTANCE_BETWEEN_Y / 2, 0);
                     GameObject barrierObj = Instantiate(bottomBarrier, aboveBridgePosition, Quaternion.identity);
-                    // barrierObj.transform.parent = parent.transform;
+                    barrierObj.transform.parent = parent.transform;
                 }
             }
         }

@@ -4,30 +4,35 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public static List<Vector3> enemyList = new List<Vector3>();
+    public static List<GameObject> enemyList = new List<GameObject>();
     private int enemyId;
 
-    public float health = 50;
+    public float health = 100f;
 
     [SerializeField] float movementSpeed = 1f;
     [SerializeField] float attackDistance = 2f;
+    [SerializeField] float knockbackDistance = 1f;
 
     private Sword sword;
+
     private Transform player;
+    private GameObject playerSwordObj;
+    private Sword playerSword;
 
     void Start()
     {
         enemyId = enemyList.Count;
-        enemyList.Add(new Vector3(transform.position.x, transform.position.y, health));
+        enemyList.Add(gameObject);
 
         sword = gameObject.GetComponentInChildren<Sword>();
+
         player = GameObject.FindWithTag("Player").transform;
+        playerSwordObj = GameObject.FindWithTag("Player Sword");
+        playerSword = playerSwordObj.GetComponent<Sword>();
     }
 
     void Update()
     {
-        enemyList[enemyId] = new Vector3(transform.position.x, transform.position.y, health);
-
         // movement
         if (!sword.attacking)
         {
@@ -43,5 +48,21 @@ public class Enemy : MonoBehaviour
         {
             sword.StartAttack();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // if hit with player sword
+        if (collision.gameObject != playerSwordObj) return;
+        if (!playerSword.swinging) return;
+
+        health -= playerSword.monsterDamage;
+        
+        if (health <= 0)
+            Destroy(gameObject);
+
+        // knockback (enemy runs right back into sword)
+        // Vector3 direction = (transform.position - player.position).normalized;
+        // transform.position += direction * knockbackDistance;
     }
 }
