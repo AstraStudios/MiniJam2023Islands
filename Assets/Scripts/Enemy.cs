@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public static List<Vector3> enemyList;
+    public static List<Vector3> enemyList = new List<Vector3>();
     private int enemyId;
 
     public float health = 50;
