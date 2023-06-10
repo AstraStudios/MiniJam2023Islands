@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class IslandSpawning : MonoBehaviour
 {
-    float gridSize = 10f;
     [SerializeField] List<GameObject> islandList = new List<GameObject>();
     [SerializeField] List<Vector2> spawnCords = new List<Vector2>();
     List<GameObject> inGameIsland = new List<GameObject>();
