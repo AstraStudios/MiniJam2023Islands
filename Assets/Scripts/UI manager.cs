@@ -7,8 +7,11 @@ using TMPro;
 public class UImanager : GenericSingleton<UImanager>
 {
     [SerializeField] Image healthBar;
+    [SerializeField] TMP_Text resourceText;
 
-    public void DisplayResources(float wood, float stone) { }
+    public void DisplayResources(float wood, float stone) {
+
+    }
     public void DisplayPlayerHealthBar(float health)
     {
         healthBar.fillAmount = Mathf.Clamp01(health / 100f);
