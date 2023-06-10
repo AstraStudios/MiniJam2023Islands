@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UImanager : GenericSingleton<UImanager>
 {
-    void DisplayResources(float wood, float stone) { }
-    void DisplayPlayerHealthBar(float health) { } // out of 100
-    void DisplayEnemyHealth(Vector3[] enimes) { } // vector 3 being (x, y, health) in world cords
+    public void DisplayResources(float wood, float stone) { }
+    public void DisplayPlayerHealthBar(float health) { } // out of 100
+    public void DisplayEnemyHealth(Vector3[] enimes) { } // vector 3 being (x, y, health) in world cords
 }
