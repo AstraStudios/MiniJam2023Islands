@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float movementSpeed = 1f;
     [SerializeField] float attackDistance = 2f;
-    [SerializeField] float knockbackDistance = 1f;
+    // [SerializeField] float knockbackDistance = 1f;
 
     private Sword sword;
 
