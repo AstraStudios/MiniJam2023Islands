@@ -33,7 +33,7 @@ public class Sword : MonoBehaviour
     {
         Vector3 direction = position - follow.position;
         facingAngle = Vector2.SignedAngle(Vector2.right, direction);
-        transform.eulerAngles = new Vector3 (0, 0, facingAngle);
+        transform.eulerAngles = new Vector3 (0, 0, facingAngle-90);
     }
 
     public void StartAttack()
