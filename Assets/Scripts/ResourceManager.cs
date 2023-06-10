@@ -8,11 +8,6 @@ public class ResourceManager : GenericSingleton<ResourceManager>
     private Dictionary<string, int> resources;
     // [SerializeField] TMP_Text resourceText;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     void Start()
     {
         // initilize dictionary
