@@ -26,8 +26,9 @@ public class MusicHandler : MonoBehaviour
         }
         if (worldMusic.Count == 0 && dungeonMusic.Count == 0)
             return;
-        else
+        if (SceneManager.GetActiveScene().name == "MainScene")
         {
+            currentClipIndex = Random.Range(0, worldMusic.Count);
             audioPlayer.clip = worldMusic[currentClipIndex];
         }
 
