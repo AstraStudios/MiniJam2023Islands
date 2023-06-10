@@ -12,13 +12,21 @@ public class BridgeBuyButton : MonoBehaviour
 
         if (bridge.built)
             gameObject.SetActive(false);
+
     }
 
-    private void OnMouseDown()
+    private void Update()
     {
-        print("click");
-        bridge.build();
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Bridge Button"));
 
-        gameObject.SetActive(false);
+            if (hit.collider == null) return;
+            if (hit.collider.gameObject != gameObject) return;
+
+            bridge.build();
+
+            gameObject.SetActive(false);
+        }
     }
 }

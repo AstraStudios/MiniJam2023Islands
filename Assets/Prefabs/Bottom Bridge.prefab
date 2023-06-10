@@ -308,7 +308,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 32
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 681383407162385416}
   - component: {fileID: 1836399516064803316}
   - component: {fileID: 4673839898425945501}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Buy Button
   m_TagString: Bridge Buy Button
   m_Icon: {fileID: 0}
