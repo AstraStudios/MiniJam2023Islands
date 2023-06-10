@@ -177,6 +177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  mainPanel: {fileID: 0}
+  losePanel: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 36cb4f685baa3403683e96fe4b8d54cf, type: 3}
 --- !u!114 &4838864693033314935
 MonoBehaviour:
   m_ObjectHideFlags: 0

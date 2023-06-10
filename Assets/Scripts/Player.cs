@@ -11,10 +11,13 @@ public class Player : MonoBehaviour
 
     [SerializeField] GameObject mainPanel;
     [SerializeField] GameObject losePanel;
+    [SerializeField] AudioClip deathClip;
+    AudioSource gameAudioSource;
 
     void Start()
     {
         sword = gameObject.GetComponentInChildren<Sword>();
+        gameAudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -36,11 +39,13 @@ public class Player : MonoBehaviour
         if (!otherObj.CompareTag("Enemy Sword")) return;
         if (!otherObj.GetComponent<Sword>().swinging) return;
 
-        health -= 10;
+        health -= 25;
         UImanager.Instance.DisplayPlayerHealthBar(health);
         if (health <= 0)
         {
             Time.timeScale = 0;
+            gameAudioSource.clip = deathClip;
+            gameAudioSource.Play();
             mainPanel.SetActive(false);
             losePanel.SetActive(true);
         }
