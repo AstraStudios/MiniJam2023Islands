@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     Sword sword;
 
     public float health = 100f;
+
+    [SerializeField] GameObject mainPanel;
+    [SerializeField] GameObject losePanel;
 
     void Start()
     {
@@ -37,6 +41,8 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             Time.timeScale = 0;
+            mainPanel.SetActive(false);
+            losePanel.SetActive(true);
         }
     }
 }
