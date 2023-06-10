@@ -5,11 +5,18 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     [SerializeField] Transform player;
+
+    [SerializeField] float windTime = .5f;
     [SerializeField] float swingTime = .5f;
+
     [SerializeField] float swingDistance = 1f;
+    [SerializeField] float windDistance = .5f;
 
     [HideInInspector] public bool swinging = false;
+    private bool winding = false;
+
     private float startedSwingingAt;
+    private float startedWindingAt;
 
     void Start()
     {
@@ -29,17 +36,28 @@ public class Sword : MonoBehaviour
         // follow player
         transform.position = player.position;
 
-        // swinging
+        // start swing by winding back
         if (Input.GetMouseButtonDown(0) && !swinging) // start
         {
             startedSwingingAt = Time.time;
+            winding = true;
+        }
+
+        // end winding, start swinging
+        if (Time.time - startedSwingingAt >= windTime && winding)
+        {
+            winding = false;
             swinging = true;
         }
-        if (Time.time - startedSwingingAt >= swingTime) swinging = false; // end
-        if (swinging) // for each frame
-        {
-            Vector3 forward = new Vector3(swingDistance * Mathf.Cos(angle * Mathf.Deg2Rad), swingDistance * Mathf.Sin(angle * Mathf.Deg2Rad), 0);
-            transform.position += forward;
-        }
+        // end swing
+        if (Time.time - startedSwingingAt >= swingTime + windTime && swinging)
+            swinging = false;
+
+        // move sword
+        Vector3 forward = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0);
+        if (winding)
+            transform.position -= forward*windDistance;
+        if (swinging)
+            transform.position += forward*swingDistance;
     }
 }
