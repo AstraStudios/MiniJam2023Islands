@@ -6,7 +6,7 @@ public class Sword : MonoBehaviour
 {
     [SerializeField] Transform player;
 
-    [SerializeField] float windTime = .5f;
+    [SerializeField] float windTime = .175f;
     [SerializeField] float swingTime = .5f;
 
     [SerializeField] float swingDistance = 1f;

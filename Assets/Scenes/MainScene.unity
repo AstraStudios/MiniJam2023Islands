@@ -846,10 +846,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1431301966}
-    - target: {fileID: 3805987621950772856, guid: 553813a2c54bd684fba43a1e5fba5bb7, type: 3}
-      propertyPath: windTime
-      value: 0.175
-      objectReference: {fileID: 0}
     - target: {fileID: 6539837802937201009, guid: 553813a2c54bd684fba43a1e5fba5bb7, type: 3}
       propertyPath: m_RootOrder
       value: -1
