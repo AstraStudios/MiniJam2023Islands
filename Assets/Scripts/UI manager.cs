@@ -33,8 +33,8 @@ public class UImanager : GenericSingleton<UImanager>
 
     public void ReloadGame()
     {
-        Time.timeScale = 0;
         SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+        Time.timeScale = 1;
     }
 
     public void BackToMenu()
