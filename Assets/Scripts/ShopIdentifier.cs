@@ -7,7 +7,7 @@ public class ShopIdentifier : MonoBehaviour
 {
     [SerializeField] GameObject swordToSpawn;
     [SerializeField] int swordCost;
-    [SerializeField] GameObject player;
+    GameObject player;
     [SerializeField] GameObject playerNoCam;
     GameObject swordBefore;
 
@@ -15,6 +15,7 @@ public class ShopIdentifier : MonoBehaviour
     void Start()
     {
         swordBefore = GameObject.Find("Player Sword Variant Variant");
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
