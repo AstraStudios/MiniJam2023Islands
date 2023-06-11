@@ -1599,6 +1599,8 @@ MonoBehaviour:
   - {fileID: 626052322}
   - {fileID: 7934848718135016496, guid: 48705afd241724ebfb9fe66e6ce432dd, type: 3}
   - {fileID: 8609303045480786173, guid: 04c6567379a1449fdb6ce229e4139c20, type: 3}
+  kingIsland: {fileID: 2309472272590153252, guid: 5daf4e37ebb40406cae98600bf67ca9f, type: 3}
+  kingBridge: {fileID: 1030471919392987522, guid: 0f9912e113063e84083875f812c9667a, type: 3}
   sideBridge: {fileID: 261130773672832461, guid: 39c5a317ac976374ebfcfb9bbd968572, type: 3}
   bottomBridge: {fileID: 1030471919392987522, guid: 8cbfdd8e0d9e6cf419e45e10148a235f, type: 3}
   sideBarrier: {fileID: 1419478351556133356, guid: ef6d04d86e9bc9e4492ce2969680a4f1, type: 3}
