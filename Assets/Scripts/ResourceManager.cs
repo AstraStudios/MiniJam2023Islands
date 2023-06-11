@@ -11,13 +11,15 @@ public class ResourceManager : GenericSingleton<ResourceManager>
     void Start()
     {
         LoadResources();
+        UImanager.Instance.DisplayResources(PlayerPrefs.GetInt("Wood"), PlayerPrefs.GetInt("Rock"), PlayerPrefs.GetInt("DungeonCoins"));
 
         if (resources == null)
         {
             resources = new Dictionary<string, int>()
             {
                 { "Rock", 0 },
-                { "Tree", 0 }
+                { "Tree", 0 },
+                { "DungeonCoins", 0 }
             };
         }
     }
@@ -30,7 +32,7 @@ public class ResourceManager : GenericSingleton<ResourceManager>
 
         SaveResources();
 
-        UImanager.Instance.DisplayResources(PlayerPrefs.GetInt("Wood"), PlayerPrefs.GetInt("Rock"));
+        UImanager.Instance.DisplayResources(PlayerPrefs.GetInt("Tree"), PlayerPrefs.GetInt("Rock"), PlayerPrefs.GetInt("DungeonCoins"));
         // resourceText.text = "Rocks: " + resources["Rock"].ToString() + ", Trees: " + resources["Tree"].ToString();
     }
 
@@ -38,6 +40,7 @@ public class ResourceManager : GenericSingleton<ResourceManager>
     {
         PlayerPrefs.SetInt("Rock", resources["Rock"]);
         PlayerPrefs.SetInt("Tree", resources["Tree"]);
+        PlayerPrefs.SetInt("DungeonCoins", resources["DungeonCoins"]);
         PlayerPrefs.Save();
     }
 
@@ -48,8 +51,10 @@ public class ResourceManager : GenericSingleton<ResourceManager>
             resources = new Dictionary<string, int>()
             {
                 { "Rock", PlayerPrefs.GetInt("Rock") },
-                { "Tree", PlayerPrefs.GetInt("Tree") }
+                { "Tree", PlayerPrefs.GetInt("Tree") },
+                { "DungeonCoins", PlayerPrefs.GetInt("DungeonCoins") }
             };
+            PlayerPrefs.Save();
         }
     }
 }

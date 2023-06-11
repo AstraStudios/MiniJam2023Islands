@@ -15,8 +15,8 @@ public class UImanager : GenericSingleton<UImanager>
         healthBar = GameObject.Find("HealthBarInner").GetComponent<RectTransform>();
     }
 
-    public void DisplayResources(float wood, float stone) {
-        resourceText.text = "Rocks: " + ResourceManager.Instance.resources["Rock"].ToString() + ", Trees: " + ResourceManager.Instance. resources["Tree"].ToString();
+    public void DisplayResources(float wood, float stone, float dc) {
+        resourceText.text = "Rocks: " + stone.ToString() + ", Trees: " + wood.ToString() + ", Dungeon Coins: " + dc;
     }
 
     public void DisplayPlayerHealthBar(float health)
