@@ -24,6 +24,8 @@ public class BridgeBuyButton : MonoBehaviour
             if (hit.collider == null) return;
             if (hit.collider.gameObject != gameObject) return;
 
+            if (ResourceManager.Instance.resources["Tree"] < 10) return;
+
             bridge.build();
 
             gameObject.SetActive(false);
