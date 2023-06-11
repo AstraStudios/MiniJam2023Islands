@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TutorialHandler : MonoBehaviour
 {
@@ -26,5 +27,10 @@ public class TutorialHandler : MonoBehaviour
         GameObject currPanel = panelLists[currPanelIndex];
         currPanel.SetActive(true);
         currPanelIndex++;
+    }
+
+    public void LoadMain()
+    {
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 }
