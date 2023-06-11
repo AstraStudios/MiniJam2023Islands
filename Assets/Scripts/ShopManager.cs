@@ -8,8 +8,9 @@ public class ShopManager : MonoBehaviour
 {
     [SerializeField] GameObject shopPanel;
     [SerializeField] GameObject mainPanel;
-    [SerializeField] List<Sprite> buyingCardSprites = new List<Sprite>();
+    [SerializeField] List<GameObject> buyingCardObj = new List<GameObject>();
     [SerializeField] List<Image> buyingCardHolders = new List<Image>();
+    [SerializeField] GameObject panelParent;
 
     bool inZone;
 
@@ -45,7 +46,11 @@ public class ShopManager : MonoBehaviour
             mainPanel.SetActive(false);
             for (int i = 0; i < 3; i++)
             {
-                buyingCardHolders[i].GetComponent<Image>().sprite = buyingCardSprites[Random.Range(0, buyingCardSprites.Count)];
+                GameObject cardToPlace = buyingCardObj[Random.Range(0, buyingCardObj.Count)];
+                Vector2 whereToSpawn = buyingCardHolders[i].transform.position;
+                GameObject toBeParented = Instantiate(cardToPlace, whereToSpawn, Quaternion.identity);
+                toBeParented.transform.parent = panelParent.transform;
+                Destroy(buyingCardHolders[i]);
             }
         }
         if (Input.GetKeyDown(KeyCode.Q))
