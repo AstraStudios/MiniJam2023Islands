@@ -5,10 +5,9 @@ using UnityEngine;
 public class KingSceneHandler : MonoBehaviour
 {
     [SerializeField] GameObject bossfightPrefab;
+    [SerializeField] GameObject bossFightInRoomChecker;
     [SerializeField] GameObject room1prefab;
     [SerializeField] GameObject player;
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip bossFightAudio;
     Vector2 spawnLoc;
     bool inZone;
 
@@ -27,8 +26,6 @@ public class KingSceneHandler : MonoBehaviour
             room1prefab.SetActive(false);
             Instantiate(bossfightPrefab, new Vector2(0, 0), Quaternion.identity);
             player.transform.position = spawnLoc;
-            audioSource.clip = bossFightAudio;
-            audioSource.Play();
         }
     }
 
@@ -44,4 +41,6 @@ public class KingSceneHandler : MonoBehaviour
     {
         inZone = false;
     }
+
+    
 }

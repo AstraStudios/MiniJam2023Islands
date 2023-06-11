@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
             losePanelObj.SetActive(true);
             PlayerPrefs.DeleteAll();
         }
+
+        PlayerPrefs.SetFloat("Health", health);
     }
 
     IEnumerator FadeTo(float targetAlpha, float duration)

@@ -7,6 +7,7 @@ public class MusicHandler : MonoBehaviour
 {
     [SerializeField] List<AudioClip> worldMusic = new List<AudioClip>();
     [SerializeField] List<AudioClip> dungeonMusic = new List<AudioClip>();
+    [SerializeField] List<AudioClip> kingMusic = new List<AudioClip>();
     AudioSource audioPlayer;
     int currentClipIndex = 0;
 
@@ -30,6 +31,10 @@ public class MusicHandler : MonoBehaviour
         {
             currentClipIndex = Random.Range(0, worldMusic.Count);
             audioPlayer.clip = worldMusic[currentClipIndex];
+        }
+        if (SceneManager.GetActiveScene().name == "KingScene")
+        {
+            audioPlayer.clip = kingMusic[currentClipIndex];
         }
 
         currentClipIndex++;
