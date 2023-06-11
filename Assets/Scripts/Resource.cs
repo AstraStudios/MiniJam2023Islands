@@ -11,13 +11,19 @@ public class Resource : MonoBehaviour
         GameObject otherObj = other.gameObject;
 
         if (!otherObj.CompareTag("Player Sword")) return;
-        if (!otherObj.GetComponent<Sword>().swinging) return;
+        Sword sword = otherObj.GetComponent<Sword>();
+        if (!sword.swinging) return;
+
+        int damage = (gameObject.CompareTag("Tree") ?
+                sword.treeDamage :
+                sword.rockDamage
+            );
 
         // give player resource
-        ResourceManager.Instance.AddResource(gameObject.tag, 1);
+        ResourceManager.Instance.AddResource(gameObject.tag, damage);
 
         // break if health is to low
-        health -= 1;
+        health -= damage;
         if (health <= 0)
         {
             Destroy(gameObject);
