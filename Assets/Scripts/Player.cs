@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     public float health = 100f;
 
     [SerializeField] GameObject mainPanel;
-    [SerializeField] GameObject losePanel;
+    [SerializeField] GameObject losePanelObj;
+    [SerializeField] Image losePanelRenderer;
     [SerializeField] AudioClip deathClip;
     AudioSource gameAudioSource;
 
@@ -47,7 +48,27 @@ public class Player : MonoBehaviour
             gameAudioSource.clip = deathClip;
             gameAudioSource.Play();
             mainPanel.SetActive(false);
-            losePanel.SetActive(true);
+            StartCoroutine(FadeTo(255, 1));
+            losePanelObj.SetActive(true);
         }
+    }
+
+    IEnumerator FadeTo(float targetAlpha, float duration)
+    {
+        float startAlpha = losePanelRenderer.color.a;
+        float startTime = Time.time;
+
+        while (Time.time - startTime < duration)
+        {
+            float elapsedTime = Time.time - startTime;
+            float normalizedTime = elapsedTime / duration;
+            float currentAlpha = Mathf.Lerp(startAlpha, targetAlpha, normalizedTime);
+
+            losePanelRenderer.color = new Color(0,0,0,currentAlpha);
+
+            yield return null;
+        }
+
+        losePanelRenderer.color = new Color(0,0,0, targetAlpha);
     }
 }

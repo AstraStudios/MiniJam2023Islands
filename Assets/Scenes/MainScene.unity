@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 25068366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1473808324}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: BackToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &25068366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,7 +340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 148466018}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1473808324}
+        m_TargetAssemblyTypeName: UImanager, Assembly-CSharp
+        m_MethodName: ReloadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &148466018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Lost!
+  m_text: You Died
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
   m_sharedMaterial: {fileID: -6194402684180319427, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
@@ -2302,6 +2326,14 @@ PrefabInstance:
       propertyPath: mainPanel
       value: 
       objectReference: {fileID: 1810776280}
+    - target: {fileID: 1031904428468116751, guid: fc0677230f7c1486186118c8a373a320, type: 3}
+      propertyPath: losePanelObj
+      value: 
+      objectReference: {fileID: 2082195312}
+    - target: {fileID: 1031904428468116751, guid: fc0677230f7c1486186118c8a373a320, type: 3}
+      propertyPath: losePanelRenderer
+      value: 
+      objectReference: {fileID: 2082195314}
     - target: {fileID: 1399091519121607720, guid: fc0677230f7c1486186118c8a373a320, type: 3}
       propertyPath: m_RootOrder
       value: 0
