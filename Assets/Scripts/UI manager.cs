@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class UImanager : GenericSingleton<UImanager>
 {
-    [SerializeField] TMP_Text resourceText;
+    [SerializeField] TMP_Text rockText;
+    [SerializeField] TMP_Text treeText;
+    [SerializeField] TMP_Text coinText;
     RectTransform healthBar;
 
     private void Start()
@@ -16,13 +18,15 @@ public class UImanager : GenericSingleton<UImanager>
     }
 
     public void DisplayResources(float wood, float stone, float dc) {
-        resourceText.text = "Rocks: " + stone.ToString() + ", Trees: " + wood.ToString() + ", Dungeon Coins: " + dc;
+        rockText.text = stone.ToString();
+        treeText.text = wood.ToString();
+        coinText.text = dc.ToString();
     }
 
     public void DisplayPlayerHealthBar(float health)
     {
         healthBar.localScale = new Vector3(230.2151f * (health / 100f), 0.675f, 1f);
-        healthBar.anchoredPosition = new Vector3(162.72185f + 230.2151f * (health / 200f), healthBar.anchoredPosition.y, 0);
+        healthBar.anchoredPosition = new Vector3(115f + 227.8294f * (health / 200f), healthBar.anchoredPosition.y, 0);
     } 
 
     public void ReloadGame()
