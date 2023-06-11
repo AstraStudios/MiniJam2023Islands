@@ -309,6 +309,10 @@ MonoBehaviour:
   dungeonMusic:
   - {fileID: 8300000, guid: 60338cf03129d4f86a5a6a6d3eeae622, type: 3}
   - {fileID: 8300000, guid: 0d7969642fad74cbca5b1ef8447094b8, type: 3}
+  - {fileID: 8300000, guid: 4e9634e0e56ee46d29809376cb74d06b, type: 3}
+  kingMusic:
+  - {fileID: 8300000, guid: 3763ae536628e4ecd93ed00bcee18d70, type: 3}
+  - {fileID: 8300000, guid: 02cfa3a3c3e7b4257a18fdfd37f01e04, type: 3}
 --- !u!1 &7761837283162435012
 GameObject:
   m_ObjectHideFlags: 0
