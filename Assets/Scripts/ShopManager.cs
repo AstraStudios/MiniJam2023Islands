@@ -9,7 +9,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] GameObject shopPanel;
     [SerializeField] GameObject mainPanel;
     [SerializeField] List<GameObject> buyingCardObj = new List<GameObject>();
-    [SerializeField] List<Image> buyingCardHolders = new List<Image>();
+    [SerializeField] List<GameObject> buyingCardHolders = new List<GameObject>();
     [SerializeField] GameObject panelParent;
 
     bool inZone;
@@ -18,6 +18,8 @@ public class ShopManager : MonoBehaviour
     void Start()
     {
         inZone = false;
+        for (int i = 0; i < buyingCardObj.Count; i++)
+            buyingCardObj[i].SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,12 +48,18 @@ public class ShopManager : MonoBehaviour
             mainPanel.SetActive(false);
             for (int i = 0; i < 3; i++)
             {
-                GameObject randObj = buyingCardObj[Random.Range(0, buyingCardObj.Count)];
+                int randObjIndex = Random.Range(0, buyingCardObj.Count);
                 Vector2 whereToMove = buyingCardHolders[i].transform.position;
+
+                GameObject randObj = buyingCardObj[randObjIndex];
                 randObj.transform.position = whereToMove;
                 randObj.SetActive(true);
+
+                // Move the Destroy method to the end of the loop
                 Destroy(buyingCardHolders[i]);
             }
+
+
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {

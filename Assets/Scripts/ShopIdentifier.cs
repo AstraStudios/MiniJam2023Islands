@@ -9,11 +9,12 @@ public class ShopIdentifier : MonoBehaviour
     [SerializeField] int swordCost;
     [SerializeField] GameObject player;
     [SerializeField] GameObject playerNoCam;
+    GameObject swordBefore;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        swordBefore = GameObject.Find("Player Sword Variant Variant");
     }
 
     // Update is called once per frame
@@ -30,6 +31,8 @@ public class ShopIdentifier : MonoBehaviour
         {
             GameObject spawnedSword = Instantiate(swordToSpawn, player.transform.position, Quaternion.identity, player.transform);
             PlayerPrefs.SetInt("Rock", PlayerPrefs.GetInt("Rock") - swordCost);
+            swordBefore.SetActive(false);
+            print("Bought a sword");
         }
     }
 }

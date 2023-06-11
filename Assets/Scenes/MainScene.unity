@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TentacleSwordDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 5127222794522903011, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9109749198753088707, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -172,6 +176,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9109749198753088707, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4606256
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109749198753088707, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -189,15 +197,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9109749198753088707, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9109749198753088707, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9109749198753088707, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9109749198753088707, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -403,6 +411,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3749036405681314131, guid: a5c70a79548d3457c8a9b8d9aba8ae8d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4606256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749036405681314131, guid: a5c70a79548d3457c8a9b8d9aba8ae8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -420,15 +432,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3749036405681314131, guid: a5c70a79548d3457c8a9b8d9aba8ae8d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3749036405681314131, guid: a5c70a79548d3457c8a9b8d9aba8ae8d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3749036405681314131, guid: a5c70a79548d3457c8a9b8d9aba8ae8d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3749036405681314131, guid: a5c70a79548d3457c8a9b8d9aba8ae8d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -453,6 +465,10 @@ PrefabInstance:
     - target: {fileID: 8762489671151384780, guid: a5c70a79548d3457c8a9b8d9aba8ae8d, type: 3}
       propertyPath: m_Name
       value: FishSwordDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762489671151384780, guid: a5c70a79548d3457c8a9b8d9aba8ae8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -924,6 +940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PickAxeSwordDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 914446698676657954, guid: 4f8bf843e47ac42899b2281fd3249b65, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7422680685627217223, guid: 4f8bf843e47ac42899b2281fd3249b65, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -961,6 +981,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7422680685627217223, guid: 4f8bf843e47ac42899b2281fd3249b65, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4606256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422680685627217223, guid: 4f8bf843e47ac42899b2281fd3249b65, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -978,15 +1002,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7422680685627217223, guid: 4f8bf843e47ac42899b2281fd3249b65, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7422680685627217223, guid: 4f8bf843e47ac42899b2281fd3249b65, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7422680685627217223, guid: 4f8bf843e47ac42899b2281fd3249b65, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7422680685627217223, guid: 4f8bf843e47ac42899b2281fd3249b65, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1785,6 +1809,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1952571890845999222, guid: 6c136259952d44e87aecfdb57b01fdcc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4606256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952571890845999222, guid: 6c136259952d44e87aecfdb57b01fdcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1802,15 +1830,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1952571890845999222, guid: 6c136259952d44e87aecfdb57b01fdcc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1952571890845999222, guid: 6c136259952d44e87aecfdb57b01fdcc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1952571890845999222, guid: 6c136259952d44e87aecfdb57b01fdcc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1952571890845999222, guid: 6c136259952d44e87aecfdb57b01fdcc, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1835,6 +1863,10 @@ PrefabInstance:
     - target: {fileID: 6406171110061389490, guid: 6c136259952d44e87aecfdb57b01fdcc, type: 3}
       propertyPath: m_Name
       value: CensoredSwordDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406171110061389490, guid: 6c136259952d44e87aecfdb57b01fdcc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2470,6 +2502,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 178107760938387567, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4606256
+      objectReference: {fileID: 0}
+    - target: {fileID: 178107760938387567, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2487,15 +2523,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178107760938387567, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 178107760938387567, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 178107760938387567, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 178107760938387567, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2520,6 +2556,10 @@ PrefabInstance:
     - target: {fileID: 451519810160115459, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
       propertyPath: m_Name
       value: PurpleSwordDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 451519810160115459, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2676,6 +2716,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 801334332327074324, guid: 8024c17de95024fbca23bb1f2f1ea88a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4606256
+      objectReference: {fileID: 0}
+    - target: {fileID: 801334332327074324, guid: 8024c17de95024fbca23bb1f2f1ea88a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2693,15 +2737,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 801334332327074324, guid: 8024c17de95024fbca23bb1f2f1ea88a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 801334332327074324, guid: 8024c17de95024fbca23bb1f2f1ea88a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 801334332327074324, guid: 8024c17de95024fbca23bb1f2f1ea88a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 801334332327074324, guid: 8024c17de95024fbca23bb1f2f1ea88a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2726,6 +2770,10 @@ PrefabInstance:
     - target: {fileID: 8579194112003376021, guid: 8024c17de95024fbca23bb1f2f1ea88a, type: 3}
       propertyPath: m_Name
       value: MidiKeyDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579194112003376021, guid: 8024c17de95024fbca23bb1f2f1ea88a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3124,9 +3172,9 @@ MonoBehaviour:
   - {fileID: 451519810160115459, guid: 6efe3e0d3312548e3934b1e42b0bc501, type: 3}
   - {fileID: 5127222794522903011, guid: aec3d452b056d4a24868fbfaf23928e1, type: 3}
   buyingCardHolders:
-  - {fileID: 1518175038}
-  - {fileID: 1983245250}
-  - {fileID: 1145134437}
+  - {fileID: 1518175035}
+  - {fileID: 1983245247}
+  - {fileID: 1145134436}
   panelParent: {fileID: 124392996}
 --- !u!61 &1935510123
 BoxCollider2D:
@@ -3538,6 +3586,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1613675759883406007, guid: d011f32b016a642e4a0256d6c2864d48, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4606256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613675759883406007, guid: d011f32b016a642e4a0256d6c2864d48, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3555,15 +3607,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1613675759883406007, guid: d011f32b016a642e4a0256d6c2864d48, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1613675759883406007, guid: d011f32b016a642e4a0256d6c2864d48, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1613675759883406007, guid: d011f32b016a642e4a0256d6c2864d48, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1613675759883406007, guid: d011f32b016a642e4a0256d6c2864d48, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3588,6 +3640,10 @@ PrefabInstance:
     - target: {fileID: 3523923221822963639, guid: d011f32b016a642e4a0256d6c2864d48, type: 3}
       propertyPath: m_Name
       value: AxeSwordDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523923221822963639, guid: d011f32b016a642e4a0256d6c2864d48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

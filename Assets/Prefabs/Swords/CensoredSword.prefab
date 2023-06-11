@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4340330236955240313, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340330236955240313, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}
       propertyPath: m_LocalScale.x
@@ -90,6 +90,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920066494725374064, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}
       propertyPath: treeDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920066494725374064, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}
+      propertyPath: followPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5920066494725374064, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}

@@ -306,6 +306,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d6ddf52328c5b450893621371a33938f, type: 3}
   - {fileID: 8300000, guid: 45b371355e8ef4062a38f67c15cd5b18, type: 3}
   - {fileID: 8300000, guid: 01219149422e8410f9323c0700e8ea5c, type: 3}
+  - {fileID: 8300000, guid: d0900651381ba46fe8cd0d9ec88f2870, type: 3}
+  - {fileID: 8300000, guid: bf550a9545d44442f9184bcab7935ba6, type: 3}
   dungeonMusic:
   - {fileID: 8300000, guid: 60338cf03129d4f86a5a6a6d3eeae622, type: 3}
   - {fileID: 8300000, guid: 0d7969642fad74cbca5b1ef8447094b8, type: 3}
