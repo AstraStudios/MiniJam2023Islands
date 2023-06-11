@@ -37,11 +37,16 @@ public class IslandSpawning : MonoBehaviour
                 Vector3 islandPosition = new Vector3(x * DISTANCE_BETWEEN_X, y * DISTANCE_BETWEEN_Y, 0);
                 if (!(x == 0 && y == 0) && !isKingIsland )
                 {
-                    GameObject randIsland = islandList[Random.Range(0, islandList.Count)];
+                    int islandType = GetIsland(new Vector2(x, y));
+                    if (islandType == -1)
+                        islandType = Random.Range(0, islandList.Count);
+
+                    GameObject randIsland = islandList[islandType];
 
                     GameObject islandObj = Instantiate(randIsland, islandPosition, Quaternion.identity);
-
                     islandObj.transform.parent = parent.transform;
+
+                    SaveIsland(new Vector2(x, y), islandType);
                 }
                 else if (isKingIsland)
                     Instantiate(kingIsland, islandPosition, Quaternion.identity);
@@ -91,5 +96,38 @@ public class IslandSpawning : MonoBehaviour
                 }
             }
         }
+    }
+
+    // islands are stored like this:
+    // for every island there is a key with its cords and its island type as the value
+    //      "Island`posx`,`posy`" = islandType
+    private string GetPrefKeyForIsland(Vector2 position)
+    {
+        return "Island" + position.x.ToString() + "," + position.y.ToString();
+    }
+
+    public void ResetSave()
+    {
+        PlayerPrefs.SetInt("SavedIslands", 0);
+
+        for (int x = -(int)(width / 2); x < width - (int)(width / 2); x++)
+        {
+            for (int y = -(int)(height / 2); y < height - (int)(height / 2); y++)
+            {
+                PlayerPrefs.DeleteKey(GetPrefKeyForIsland(new Vector2(x, y)));
+            }
+        }
+    }
+
+    public void SaveIsland(Vector2 position, int islandType)
+    {
+        PlayerPrefs.SetInt("SavedIslands", 1);
+        PlayerPrefs.SetInt(GetPrefKeyForIsland(position), islandType);
+        PlayerPrefs.Save();
+    }
+
+    public int GetIsland(Vector2 position)
+    {
+        return PlayerPrefs.GetInt(GetPrefKeyForIsland(position), -1);
     }
 }
