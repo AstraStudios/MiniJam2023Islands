@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public static List<GameObject> enemyList = new List<GameObject>();
-    private int enemyId;
-
+    [SerializeField] float healthBarYOffset;
+    // [SerializeField] GameObject healthBar;
     public float health = 100f;
 
     [SerializeField] float movementSpeed = 1f;
@@ -18,17 +17,18 @@ public class Enemy : MonoBehaviour
     private Transform player;
     private GameObject playerSwordObj;
     private Sword playerSword;
+    private GameObject healthBar;
 
     void Start()
     {
-        enemyId = enemyList.Count;
-        enemyList.Add(gameObject);
-
         sword = gameObject.GetComponentInChildren<Sword>();
 
         player = GameObject.FindWithTag("Player").transform;
         playerSwordObj = GameObject.FindWithTag("Player Sword");
         playerSword = playerSwordObj.GetComponent<Sword>();
+
+        //healthBar = Instantiate(healthBar, transform.position + new Vector3(0, healthBarYOffset, 0), Quaternion.identity, transform);
+        healthBar = transform.GetChild(1).gameObject;
     }
 
     void Update()
@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
             transform.Translate(direction * movementSpeed * Time.deltaTime);
 
             sword.FacePosition(player.position);
+            healthBar.transform.position = transform.position + new Vector3(0, healthBarYOffset, 0);
         }
 
         // attack when close enough
@@ -57,6 +58,7 @@ public class Enemy : MonoBehaviour
         if (!playerSword.swinging) return;
 
         health -= playerSword.monsterDamage;
+        healthBar.GetComponent<EnemyHealthBar>().SetHealth(health);
         
         if (health <= 0)
             Destroy(gameObject);
