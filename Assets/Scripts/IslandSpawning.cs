@@ -6,10 +6,14 @@ public class IslandSpawning : MonoBehaviour
 {
     [SerializeField] List<GameObject> islandList = new List<GameObject>();
 
+    [SerializeField] GameObject kingIsland;
+    [SerializeField] GameObject kingBridge;
+
     [SerializeField] GameObject sideBridge;
     [SerializeField] GameObject bottomBridge;
     [SerializeField] GameObject sideBarrier;
     [SerializeField] GameObject bottomBarrier;
+
     [SerializeField] GameObject parent;
 
     [SerializeField] int width = 5;
@@ -26,9 +30,12 @@ public class IslandSpawning : MonoBehaviour
         {
             for (int y = -(int)(height/2); y < height-(int)(height/2); y++)
             {
+                bool isKingIsland = (x == 0 && y == (height-1) - (int)(height / 2)); 
+                bool isRightOfKingIsland = (x == 1 && y == (height-1) - (int)(height / 2)); 
+
                 // create island if not at center
                 Vector3 islandPosition = new Vector3(x * DISTANCE_BETWEEN_X, y * DISTANCE_BETWEEN_Y, 0);
-                if (!(x == 0 && y == 0))
+                if (!(x == 0 && y == 0) && !isKingIsland )
                 {
                     GameObject randIsland = islandList[Random.Range(0, islandList.Count)];
 
@@ -36,10 +43,12 @@ public class IslandSpawning : MonoBehaviour
 
                     islandObj.transform.parent = parent.transform;
                 }
+                else if (isKingIsland)
+                    Instantiate(kingIsland, islandPosition, Quaternion.identity);
 
                 // create bridge to left (if not farthest left island)
                 Vector3 leftBridgePosition = islandPosition - new Vector3(DISTANCE_BETWEEN_X / 2, 0, 0);
-                if (x != -(int)(width / 2))
+                if (x != -(int)(width / 2) && !isKingIsland && !isRightOfKingIsland) //!isRightOfKingIsland)
                 {
                     GameObject bridgeObj = Instantiate(sideBridge, leftBridgePosition, Quaternion.identity);
                     bridgeObj.transform.parent = parent.transform;
@@ -52,10 +61,14 @@ public class IslandSpawning : MonoBehaviour
 
                 // create bridge below (if not bottom island)
                 Vector3 bottomBridgePosition = islandPosition - new Vector3(0, DISTANCE_BETWEEN_Y / 2, 0);
-                if (y != -(int)(height / 2))
+                if (y != -(int)(height / 2) && !isKingIsland )
                 {
                     GameObject bridgeObj = Instantiate(bottomBridge, bottomBridgePosition, Quaternion.identity);
                     bridgeObj.transform.parent = parent.transform;
+                }
+                else if (isKingIsland)
+                {
+                    Instantiate(kingBridge, bottomBridgePosition, Quaternion.identity);
                 }
                 else
                 {

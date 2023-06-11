@@ -5,12 +5,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float healthBarYOffset;
-    // [SerializeField] GameObject healthBar;
     public float health = 100f;
 
     [SerializeField] float movementSpeed = 1f;
     [SerializeField] float attackDistance = 2f;
-    // [SerializeField] float knockbackDistance = 1f;
 
     private Sword sword;
 
@@ -27,7 +25,6 @@ public class Enemy : MonoBehaviour
         playerSwordObj = GameObject.FindWithTag("Player Sword");
         playerSword = playerSwordObj.GetComponent<Sword>();
 
-        //healthBar = Instantiate(healthBar, transform.position + new Vector3(0, healthBarYOffset, 0), Quaternion.identity, transform);
         healthBar = transform.GetChild(1).gameObject;
     }
 
@@ -62,9 +59,5 @@ public class Enemy : MonoBehaviour
         
         if (health <= 0)
             Destroy(gameObject);
-
-        // knockback (enemy runs right back into sword)
-        // Vector3 direction = (transform.position - player.position).normalized;
-        // transform.position += direction * knockbackDistance;
     }
 }
