@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         // movement
-        if (!sword.attacking)
+        if (!sword.attacking && Vector3.Distance(transform.position, player.position) <= 8f)
         {
             Vector2 direction = (player.position - transform.position).normalized;
             transform.Translate(direction * movementSpeed * Time.deltaTime);
