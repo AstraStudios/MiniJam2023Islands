@@ -16,6 +16,8 @@ public class Sword : MonoBehaviour
     [HideInInspector] public bool winding = false;
     [HideInInspector] public bool attacking = false; // swinging || winding
 
+    [SerializeField] public float monsterDamage = 25f;
+
     private float startedSwingingAt = 0f;
 
     private float facingAngle = 0f;
