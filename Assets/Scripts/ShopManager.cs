@@ -45,8 +45,16 @@ public class ShopManager : MonoBehaviour
             mainPanel.SetActive(false);
             for (int i = 0; i < 3; i++)
             {
-                buyingCardHolders[i].GetComponent<SpriteRenderer>().sprite = buyingCardSprites[Random.Range(0, buyingCardSprites.Count)];
+                buyingCardHolders[i].GetComponent<Image>().sprite = buyingCardSprites[Random.Range(0, buyingCardSprites.Count)];
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            inZone = false;
+            print("YOU LEFT");
+            shopPanel.SetActive(false);
+            mainPanel.SetActive(true);
+            Time.timeScale = 1;
         }
     }
 }
