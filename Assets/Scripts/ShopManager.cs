@@ -46,10 +46,10 @@ public class ShopManager : MonoBehaviour
             mainPanel.SetActive(false);
             for (int i = 0; i < 3; i++)
             {
-                GameObject cardToPlace = buyingCardObj[Random.Range(0, buyingCardObj.Count)];
-                Vector2 whereToSpawn = buyingCardHolders[i].transform.position;
-                GameObject toBeParented = Instantiate(cardToPlace, whereToSpawn, Quaternion.identity);
-                toBeParented.transform.parent = panelParent.transform;
+                GameObject randObj = buyingCardObj[Random.Range(0, buyingCardObj.Count)];
+                Vector2 whereToMove = buyingCardHolders[i].transform.position;
+                randObj.transform.position = whereToMove;
+                randObj.SetActive(true);
                 Destroy(buyingCardHolders[i]);
             }
         }

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4340330236955240313, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340330236955240313, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}
       propertyPath: m_LocalScale.x
@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TentacleSwordPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5920066494725374064, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}
+      propertyPath: follow
+      value: 
+      objectReference: {fileID: 1399091519121607720, guid: fc0677230f7c1486186118c8a373a320, type: 3}
     - target: {fileID: 5920066494725374064, guid: 46e1fe7ab630b3a4c8d21761be58a711, type: 3}
       propertyPath: swingTime
       value: 0.15

@@ -28,8 +28,7 @@ public class ShopIdentifier : MonoBehaviour
             print("You dont have enough money!");
         if (PlayerPrefs.GetInt("Rock") > swordCost)
         {
-            GameObject spawnedSword = Instantiate(swordToSpawn, player.transform.position, Quaternion.identity);
-            spawnedSword.transform.parent = player.transform;
+            GameObject spawnedSword = Instantiate(swordToSpawn, player.transform.position, Quaternion.identity, player.transform);
             PlayerPrefs.SetInt("Rock", PlayerPrefs.GetInt("Rock") - swordCost);
         }
     }
