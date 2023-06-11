@@ -30,7 +30,6 @@ public class Bridge : MonoBehaviour
         spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
         Destroy(gameObject.GetComponent<BoxCollider2D>());
 
-        ResourceManager.Instance.AddResource("Tree", -10);
         IslandSpawning.Instance.SaveBridge(left, position, true);
     }
 }

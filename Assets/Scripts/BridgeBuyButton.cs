@@ -5,6 +5,7 @@ using UnityEngine;
 public class BridgeBuyButton : MonoBehaviour
 {
     Bridge bridge;
+    [SerializeField] bool kingBridge;
 
     void Start()
     {
@@ -24,7 +25,11 @@ public class BridgeBuyButton : MonoBehaviour
             if (hit.collider == null) return;
             if (hit.collider.gameObject != gameObject) return;
 
-            if (ResourceManager.Instance.resources["Tree"] < 10) return;
+            string resource = (kingBridge ? "DungeonCoins" : "Tree");
+            int resourceAmount = (kingBridge ? 5 : 10);
+
+            if (ResourceManager.Instance.resources[resource] < resourceAmount) return;
+            ResourceManager.Instance.AddResource(resource, -resourceAmount);
 
             bridge.build();
 

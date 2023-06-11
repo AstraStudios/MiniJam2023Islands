@@ -6,22 +6,14 @@ using UnityEngine.SceneManagement;
 public class DungeonGameManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> dungeonPrefabs = new List<GameObject>();
-
+    GameObject dungeonChest;
 
     private void Awake()
     {
         SpawnRandDungeon();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        dungeonChest = GameObject.Find("Dungeon Chest");
+        dungeonChest.SetActive(false);
     }
 
     void SpawnRandDungeon()
@@ -31,5 +23,12 @@ public class DungeonGameManager : MonoBehaviour
             int randDungeon = Random.Range(0, dungeonPrefabs.Count);
             Instantiate(dungeonPrefabs[randDungeon], new Vector2(0, 0), Quaternion.identity);
         }
+    }
+
+    private void Update()
+    {
+        // if there are no more enemies
+        if (!(GameObject.FindGameObjectWithTag("Enemy")) && dungeonChest)
+            dungeonChest.SetActive(true);
     }
 }

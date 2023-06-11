@@ -293,6 +293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   built: 0
+  left: 0
+  position: {x: 0, y: 0}
 --- !u!61 &32528139966134764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -437,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb42d741d6ff42c429fa8cdf5f972ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kingBridge: 1
 --- !u!61 &4673839898425945501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -824,7 +827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10 dungeon coins
+  m_text: 5 dungeon coins
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
   m_sharedMaterial: {fileID: -6194402684180319427, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
