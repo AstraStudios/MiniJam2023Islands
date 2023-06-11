@@ -99,7 +99,7 @@ public class IslandSpawning : GenericSingleton<IslandSpawning>
                     Vector3 rightBridgePosition = islandPosition + new Vector3(DISTANCE_BETWEEN_X / 2, 0, 0);
                     Instantiate(sideBarrier, rightBridgePosition, Quaternion.identity, parent);
                 }
-                if (y == (int)(height / 2)-1)
+                if (y == height-1)
                 {
                     Vector3 aboveBridgePosition = islandPosition + new Vector3(0, DISTANCE_BETWEEN_Y / 2, 0);
                     Instantiate(bottomBarrier, aboveBridgePosition, Quaternion.identity, parent);
