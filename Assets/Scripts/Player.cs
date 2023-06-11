@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         if (!otherObj.CompareTag("Enemy Sword")) return;
         if (!otherObj.GetComponent<Sword>().swinging) return;
 
-        health -= 25;
+        health -= 20;
         UImanager.Instance.DisplayPlayerHealthBar(health);
         if (health <= 0)
         {
