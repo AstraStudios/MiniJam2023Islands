@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
             mainPanel.SetActive(false);
             StartCoroutine(FadeTo(255, 1));
             losePanelObj.SetActive(true);
+            PlayerPrefs.DeleteAll();
         }
     }
 

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DungeonLoader : MonoBehaviour
 {
     bool playerInZone;
+    [SerializeField] bool isKingIsland;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,10 @@ public class DungeonLoader : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && playerInZone && SceneManager.GetActiveScene().name == "DungeonScene")
         {
             SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+        }
+        if (Input.GetKeyDown(KeyCode.E) && playerInZone && SceneManager.GetActiveScene().name == "MainScene" && isKingIsland == true)
+        {
+            SceneManager.LoadScene("KingScene", LoadSceneMode.Single);
         }
     }
 

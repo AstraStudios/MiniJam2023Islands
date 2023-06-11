@@ -37,7 +37,7 @@ public class ResourceManager : GenericSingleton<ResourceManager>
     private void SaveResources()
     {
         PlayerPrefs.SetInt("Rock", resources["Rock"]);
-        PlayerPrefs.SetInt("Rock", resources["Tree"]);
+        PlayerPrefs.SetInt("Tree", resources["Tree"]);
         PlayerPrefs.Save();
     }
 
