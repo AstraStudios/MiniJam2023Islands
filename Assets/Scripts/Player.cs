@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         if (!otherObj.CompareTag("Enemy Sword")) return;
         if (!otherObj.GetComponent<Sword>().swinging) return;
 
-        health -= 25;
+        health -= 20;
         UImanager.Instance.DisplayPlayerHealthBar(health);
         if (health <= 0)
         {
@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
             mainPanel.SetActive(false);
             StartCoroutine(FadeTo(255, 1));
             losePanelObj.SetActive(true);
+            PlayerPrefs.DeleteAll();
         }
     }
 
