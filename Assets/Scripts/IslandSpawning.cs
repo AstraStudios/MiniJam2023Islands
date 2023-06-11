@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IslandSpawning : MonoBehaviour
+public class IslandSpawning : GenericSingleton<IslandSpawning>
 {
     [SerializeField] List<GameObject> islandList = new List<GameObject>();
 
@@ -56,6 +56,16 @@ public class IslandSpawning : MonoBehaviour
                 if (x != -(int)(width / 2) && !isKingIsland && !isRightOfKingIsland) //!isRightOfKingIsland)
                 {
                     GameObject bridgeObj = Instantiate(sideBridge, leftBridgePosition, Quaternion.identity);
+                    Bridge bridge = bridgeObj.transform.GetChild(2).GetComponent<Bridge>();
+
+                    bridge.left = true;
+                    bridge.position = new Vector2(x, y);
+
+                    if (GetBridgeBuilt(bridge.left, bridge.position))
+                        bridge.build();
+                    else
+                        SaveBridge(bridge.left, bridge.position, false);
+
                     bridgeObj.transform.parent = parent.transform;
                 }
                 else
@@ -69,6 +79,16 @@ public class IslandSpawning : MonoBehaviour
                 if (y != -(int)(height / 2) && !isKingIsland )
                 {
                     GameObject bridgeObj = Instantiate(bottomBridge, bottomBridgePosition, Quaternion.identity);
+                    Bridge bridge = bridgeObj.transform.GetChild(2).GetComponent<Bridge>();
+
+                    bridge.left = true;
+                    bridge.position = new Vector2(x, y);
+
+                    if (GetBridgeBuilt(bridge.left, bridge.position))
+                        bridge.build();
+                    else
+                        SaveBridge(bridge.left, bridge.position, false);
+
                     bridgeObj.transform.parent = parent.transform;
                 }
                 else if (isKingIsland)
@@ -105,6 +125,10 @@ public class IslandSpawning : MonoBehaviour
     {
         return "Island" + position.x.ToString() + "," + position.y.ToString();
     }
+    private string GetPrefKeyForBridge(bool left, Vector3 position)
+    {
+        return (left ? "Left" : "Bottom") + position.x.ToString() + "," + position.y.ToString();
+    }
 
     public void ResetSave()
     {
@@ -115,8 +139,12 @@ public class IslandSpawning : MonoBehaviour
             for (int y = -(int)(height / 2); y < height - (int)(height / 2); y++)
             {
                 PlayerPrefs.DeleteKey(GetPrefKeyForIsland(new Vector2(x, y)));
+                PlayerPrefs.DeleteKey(GetPrefKeyForBridge(false, new Vector2(x, y)));
+                PlayerPrefs.DeleteKey(GetPrefKeyForBridge(true, new Vector2(x, y)));
             }
         }
+
+        PlayerPrefs.Save();
     }
 
     public void SaveIsland(Vector2 position, int islandType)
@@ -129,5 +157,15 @@ public class IslandSpawning : MonoBehaviour
     public int GetIsland(Vector2 position)
     {
         return PlayerPrefs.GetInt(GetPrefKeyForIsland(position), -1);
+    }
+
+    public void SaveBridge(bool left, Vector2 position, bool built)
+    {
+        PlayerPrefs.SetInt(GetPrefKeyForBridge(left, position), (built ? 1 : 0));
+        PlayerPrefs.Save();
+    }
+    public bool GetBridgeBuilt(bool left, Vector3 position)
+    {
+        return (PlayerPrefs.GetInt(GetPrefKeyForBridge(left, position), 0) == 1 ? true : false);
     }
 }
