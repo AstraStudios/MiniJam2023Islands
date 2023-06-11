@@ -10,10 +10,12 @@ public class Bridge : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
 
         if (!built)
+        {
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, .5f);
+        }
         else
             Destroy(gameObject.GetComponent<BoxCollider2D>());
     }
