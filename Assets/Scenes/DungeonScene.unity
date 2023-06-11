@@ -286,8 +286,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
+  m_sharedMaterial: {fileID: -6194402684180319427, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -710,7 +710,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.07450981, g: 0.09803922, b: 0.105882354, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -774,17 +774,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1031904428468116751, guid: fc0677230f7c1486186118c8a373a320, type: 3}
+      propertyPath: mainPanel
+      value: 
+      objectReference: {fileID: 1442882187}
     - target: {fileID: 1399091519121607720, guid: fc0677230f7c1486186118c8a373a320, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1399091519121607720, guid: fc0677230f7c1486186118c8a373a320, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.59
       objectReference: {fileID: 0}
     - target: {fileID: 1399091519121607720, guid: fc0677230f7c1486186118c8a373a320, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.99
       objectReference: {fileID: 0}
     - target: {fileID: 1399091519121607720, guid: fc0677230f7c1486186118c8a373a320, type: 3}
       propertyPath: m_LocalPosition.z
