@@ -46,6 +46,11 @@ public class TitleScreen : GenericSingleton<TitleScreen>
         StartCoroutine(ShuffleIslands());
     }
 
+    public void LoadTutorial()
+    {
+        SceneManager.LoadScene("TutorialScene", LoadSceneMode.Single);
+    }
+
     public void EndTitle()
     {
         StopCoroutine(ShuffleIslands());
