@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
+    public bool followPlayer = false;
     public Transform follow;
 
     [SerializeField] float windTime = .175f;
@@ -23,6 +24,12 @@ public class Sword : MonoBehaviour
     private float startedSwingingAt = 0f;
 
     private float facingAngle = 0f;
+
+    private void Start()
+    {
+        if (followPlayer)
+            follow = GameObject.Find("Player").transform;
+    }
 
     void Update()
     {
