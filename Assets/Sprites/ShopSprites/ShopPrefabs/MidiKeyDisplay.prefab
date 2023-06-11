@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6406171110061389490
+--- !u!1 &8579194112003376021
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1952571890845999222}
-  - component: {fileID: 2386422871326841937}
-  - component: {fileID: 1595776601940186902}
-  - component: {fileID: 8811749747969948347}
-  - component: {fileID: 1454932348177800637}
+  - component: {fileID: 801334332327074324}
+  - component: {fileID: 8883859181059294408}
+  - component: {fileID: 3899905763406528484}
+  - component: {fileID: 1819610887380521402}
+  - component: {fileID: 6837483038143255255}
   m_Layer: 5
-  m_Name: CensoredSwordDisplay
+  m_Name: MidiKeyDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1952571890845999222
+--- !u!224 &801334332327074324
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6406171110061389490}
+  m_GameObject: {fileID: 8579194112003376021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 3.4606252, z: 1}
@@ -40,21 +40,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2386422871326841937
+--- !u!222 &8883859181059294408
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6406171110061389490}
+  m_GameObject: {fileID: 8579194112003376021}
   m_CullTransparentMesh: 1
---- !u!114 &1595776601940186902
+--- !u!114 &3899905763406528484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6406171110061389490}
+  m_GameObject: {fileID: 8579194112003376021}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: adf7697bd016d47ae8a8515fa6d1cb5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fcba88e2ee41e470b96be4fb643c8f08, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -78,13 +78,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8811749747969948347
+--- !u!114 &1819610887380521402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6406171110061389490}
+  m_GameObject: {fileID: 8579194112003376021}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -118,35 +118,35 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1595776601940186902}
+  m_TargetGraphic: {fileID: 3899905763406528484}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6406171110061389490}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 6837483038143255255}
+        m_TargetAssemblyTypeName: ShopIdentifier, Assembly-CSharp
+        m_MethodName: SpawnSelectedSword
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1454932348177800637
+--- !u!114 &6837483038143255255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6406171110061389490}
+  m_GameObject: {fileID: 8579194112003376021}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 158c6cac0400e4a67b3975735e29098e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordToSpawn: {fileID: 8862619006558201332, guid: 349dc4f8a8b45431cb2bf0b637603a39, type: 3}
-  swordCost: 75
+  swordToSpawn: {fileID: 2769350784592747248, guid: f3d8dd27dae0d46adbdcfa92ac34c916, type: 3}
+  swordCost: 50
   player: {fileID: 7742086975340318514, guid: fc0677230f7c1486186118c8a373a320, type: 3}
   playerNoCam: {fileID: 5683253225741573732, guid: 9d91dff29be134e6aa37335e77e2ef68, type: 3}
