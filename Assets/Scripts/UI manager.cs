@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UImanager : GenericSingleton<UImanager>
 {
@@ -28,5 +29,16 @@ public class UImanager : GenericSingleton<UImanager>
     private void Update()
     {
         DisplayEnemyHealth(Enemy.enemyList);
+    }
+
+    public void ReloadGame()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+    }
+
+    public void BackToMenu()
+    {
+        Debug.Log("I cant do anything yet!");
     }
 }
