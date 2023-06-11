@@ -6,9 +6,12 @@ public class Bridge : MonoBehaviour
 {
     public bool built = false;
 
+    public bool left;
+    public Vector2 position;
+
     private SpriteRenderer spriteRenderer;
 
-    void Start()
+    void Awake()
     {
         spriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
 
@@ -28,5 +31,6 @@ public class Bridge : MonoBehaviour
         Destroy(gameObject.GetComponent<BoxCollider2D>());
 
         ResourceManager.Instance.AddResource("Tree", -10);
+        IslandSpawning.Instance.SaveBridge(left, position, true);
     }
 }
