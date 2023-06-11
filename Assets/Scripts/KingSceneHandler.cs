@@ -29,7 +29,6 @@ public class KingSceneHandler : MonoBehaviour
             player.transform.position = spawnLoc;
             audioSource.clip = bossFightAudio;
             audioSource.Play();
-            print("HELLO NIGRECT");
         }
     }
 
