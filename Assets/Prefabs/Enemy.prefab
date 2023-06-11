@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e922a73e79b80ea40addbd2aa841cce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followPlayer: 0
   follow: {fileID: 2687850365446164638}
   windTime: 0.5
   swingTime: 0.5
@@ -107,6 +108,8 @@ MonoBehaviour:
   winding: 0
   attacking: 0
   monsterDamage: 25
+  treeDamage: 1
+  rockDamage: 1
 --- !u!61 &1390625144655436899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -415,7 +418,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3820073274953857312}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26884671d105f3443829540e5214660b, type: 3}
   m_Name: 
@@ -424,10 +427,6 @@ MonoBehaviour:
   health: 100
   movementSpeed: 1
   attackDistance: 2
-  knockbackDistance: 1.5
-  stunTimer: 0
-  stunStart: 0
-  invunrableAfterHitTime: 0.5
   invunrable: 0
 --- !u!61 &2258387448109679220
 BoxCollider2D:
@@ -520,4 +519,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a420325fd3b37df46b8242b8a7f1fd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   fullHealthScale: 1.525

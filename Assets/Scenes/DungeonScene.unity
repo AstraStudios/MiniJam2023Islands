@@ -705,6 +705,7 @@ MonoBehaviour:
   rockText: {fileID: 756728109}
   treeText: {fileID: 1532826934}
   coinText: {fileID: 2065700605}
+  healthBar: {fileID: 1301369198}
 --- !u!1 &945925041
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +875,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a55b185d5565d34fa4d8cdbc4fc6104, type: 3}
+--- !u!224 &1301369198 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2475203589981291637, guid: 0a55b185d5565d34fa4d8cdbc4fc6104, type: 3}
+  m_PrefabInstance: {fileID: 1301369197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1425148875
 GameObject:
   m_ObjectHideFlags: 0

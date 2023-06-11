@@ -778,7 +778,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c06fd326c71ede4d8780e883ac69930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceText: {fileID: 1307745363}
+  rockText: {fileID: 0}
+  treeText: {fileID: 0}
+  coinText: {fileID: 0}
+  healthBar: {fileID: 289464839}
 --- !u!114 &269892623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,6 +896,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f03e75970dd2443f3b06cb264d991522, type: 3}
+--- !u!224 &289464839 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5627949557076239956, guid: f03e75970dd2443f3b06cb264d991522, type: 3}
+  m_PrefabInstance: {fileID: 289464838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &547119215
 GameObject:
   m_ObjectHideFlags: 0
