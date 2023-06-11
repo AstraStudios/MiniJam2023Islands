@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
         sword = gameObject.GetComponentInChildren<Sword>();
 
         player = Player.Instance.gameObject.transform;
-        playerSwordObj = player.GetChild(1).gameObject;
+        playerSwordObj = player.GetChild(0).gameObject;
         playerSword = playerSwordObj.GetComponent<Sword>();
 
         healthBar = transform.GetChild(1).gameObject;
