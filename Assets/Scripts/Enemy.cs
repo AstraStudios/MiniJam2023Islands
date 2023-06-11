@@ -17,6 +17,12 @@ public class Enemy : MonoBehaviour
     private Sword playerSword;
     private GameObject healthBar;
 
+    // needs to be invunrable after hit so it dousent double register hits when its sword gets hit
+    private float invunrableAfterHitTime = .1f;
+    private float iWasHitAt = Mathf.NegativeInfinity; // time
+    public bool invunrable = false;
+
+
     void Start()
     {
         sword = gameObject.GetComponentInChildren<Sword>();
@@ -30,6 +36,13 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        // make player invunrable after hit
+        if ((Time.time - iWasHitAt) < invunrableAfterHitTime) invunrable = true;
+        else                                                  invunrable = false;
+
+        if (gameObject.name == "StartEnemy")
+            print(invunrable);
+
         // movement
         if (!sword.attacking && Vector3.Distance(transform.position, player.position) <= 8f)
         {
@@ -54,10 +67,14 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject != playerSwordObj) return;
         if (!playerSword.swinging) return;
 
+        if (invunrable) return;
+
         health -= playerSword.monsterDamage;
         healthBar.GetComponent<EnemyHealthBar>().SetHealth(health);
         
         if (health <= 0)
             Destroy(gameObject);
+
+        iWasHitAt = Time.time;
     }
 }

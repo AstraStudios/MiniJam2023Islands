@@ -424,6 +424,11 @@ MonoBehaviour:
   health: 100
   movementSpeed: 1
   attackDistance: 2
+  knockbackDistance: 1.5
+  stunTimer: 0
+  stunStart: 0
+  invunrableAfterHitTime: 0.5
+  invunrable: 0
 --- !u!61 &2258387448109679220
 BoxCollider2D:
   m_ObjectHideFlags: 0
