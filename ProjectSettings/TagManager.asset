@@ -11,6 +11,7 @@ TagManager:
   - Player Sword
   - Bridge Buy Button
   - Enemy Sword
+  - Enemy
   layers:
   - Default
   - TransparentFX
