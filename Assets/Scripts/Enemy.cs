@@ -40,9 +40,6 @@ public class Enemy : MonoBehaviour
         if ((Time.time - iWasHitAt) < invunrableAfterHitTime) invunrable = true;
         else                                                  invunrable = false;
 
-        if (gameObject.name == "StartEnemy")
-            print(invunrable);
-
         // movement
         if (!sword.attacking && Vector3.Distance(transform.position, player.position) <= 8f)
         {
