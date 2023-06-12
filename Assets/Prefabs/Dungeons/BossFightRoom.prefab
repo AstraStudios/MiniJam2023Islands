@@ -764,6 +764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: King
       objectReference: {fileID: 0}
+    - target: {fileID: 3896119274672026231, guid: 408178e5b9637df4b88ab748909cf14e, type: 3}
+      propertyPath: m_TagString
+      value: King
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
