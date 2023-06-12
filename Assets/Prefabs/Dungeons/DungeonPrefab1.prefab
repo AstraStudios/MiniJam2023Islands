@@ -1048,6 +1048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7538831168310638336, guid: 3f9693ee1579fc847a87d45775b8c352, type: 3}
+      propertyPath: infinateSight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1191,6 +1195,10 @@ PrefabInstance:
     - target: {fileID: 3820073274953857312, guid: 3f9693ee1579fc847a87d45775b8c352, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538831168310638336, guid: 3f9693ee1579fc847a87d45775b8c352, type: 3}
+      propertyPath: infinateSight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1693,6 +1701,10 @@ PrefabInstance:
     - target: {fileID: 3820073274953857312, guid: 3f9693ee1579fc847a87d45775b8c352, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538831168310638336, guid: 3f9693ee1579fc847a87d45775b8c352, type: 3}
+      propertyPath: infinateSight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

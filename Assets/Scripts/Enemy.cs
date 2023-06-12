@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] bool infinateSight = false;
     [SerializeField] float healthBarYOffset;
     public float health = 100f;
 
@@ -41,7 +42,7 @@ public class Enemy : MonoBehaviour
         else                                                  invunrable = false;
 
         // movement
-        if (!sword.attacking && Vector3.Distance(transform.position, player.position) <= 8f)
+        if (!sword.attacking && (infinateSight ? true : Vector3.Distance(transform.position, player.position) <= 8f))
         {
             Vector2 direction = (player.position - transform.position).normalized;
             transform.Translate(direction * movementSpeed * Time.deltaTime);
