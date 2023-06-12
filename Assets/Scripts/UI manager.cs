@@ -35,9 +35,4 @@ public class UImanager : GenericSingleton<UImanager>
         SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
         Time.timeScale = 1;
     }
-
-    public void BackToMenu()
-    {
-        Debug.Log("I cant do anything yet!");
-    }
 }
