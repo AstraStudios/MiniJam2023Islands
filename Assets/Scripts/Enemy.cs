@@ -69,9 +69,13 @@ public class Enemy : MonoBehaviour
 
         health -= playerSword.monsterDamage;
         healthBar.GetComponent<EnemyHealthBar>().SetHealth(health);
-        
+
         if (health <= 0)
+        {
+            if (gameObject.CompareTag("King"))
+                KingSceneHandler.Instance.Win();
             Destroy(gameObject);
+        }
 
         iWasHitAt = Time.time;
     }

@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class KingSceneHandler : MonoBehaviour
+public class KingSceneHandler : GenericSingleton<KingSceneHandler>
 {
     [SerializeField] GameObject bossfightPrefab;
     [SerializeField] GameObject bossFightInRoomChecker;
     [SerializeField] GameObject room1prefab;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject winPanel;
+    [SerializeField] GameObject mainPanel;
     Vector2 spawnLoc;
     bool inZone;
 
@@ -42,5 +45,14 @@ public class KingSceneHandler : MonoBehaviour
         inZone = false;
     }
 
-    
+    public void Win()
+    {
+        winPanel.SetActive(true);
+        mainPanel.SetActive(false);
+    }
+
+    public void LoadBackToMain()
+    {
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+    }
 }
