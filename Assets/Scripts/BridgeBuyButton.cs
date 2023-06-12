@@ -30,10 +30,10 @@ public class BridgeBuyButton : MonoBehaviour
 
             if (kingBridge)
             {
-                if (ResourceManager.Instance.resources["Rock"] < 100) return;
-                if (ResourceManager.Instance.resources["DungeonCoins"] < 5) return;
-                ResourceManager.Instance.AddResource("Rock", -100);
-                ResourceManager.Instance.AddResource("DungeonCoins", -5);
+                if (ResourceManager.Instance.resources["Rock"] < 75) return;
+                if (ResourceManager.Instance.resources["DungeonCoins"] < 3) return;
+                ResourceManager.Instance.AddResource("Rock", -75);
+                ResourceManager.Instance.AddResource("DungeonCoins", -3);
             }
             else {
                 if (ResourceManager.Instance.resources["Tree"] < 10) return;
