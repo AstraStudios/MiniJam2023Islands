@@ -367,8 +367,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819852993972366196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5291235, y: 0.14609225, z: 1}
+  m_LocalPosition: {x: 0.0012, y: 0, z: 0}
+  m_LocalScale: {x: 0.5827414, y: 0.14609225, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2547998481657023902}
@@ -754,7 +754,7 @@ RectTransform:
   m_GameObject: {fileID: 6858672107012298468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.62997264, y: 0.86021495, z: 1}
+  m_LocalScale: {x: 0.55, y: 0.86021495, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7609554385981576962}
@@ -827,7 +827,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5 dungeon coins
+  m_text: '5coins
+
+    100 stone'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
   m_sharedMaterial: {fileID: -6194402684180319427, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
@@ -890,7 +892,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.0000019073486, w: 0}
+  m_margin: {x: -0.11639029, y: 0, z: -0.10726708, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0

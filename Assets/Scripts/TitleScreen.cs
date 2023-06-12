@@ -58,6 +58,10 @@ public class TitleScreen : GenericSingleton<TitleScreen>
         titleCam.SetActive(true);
 
         StartCoroutine(ShuffleIslands());
+
+        ResourceManager.Instance.AddResource("Tree", 100);
+        ResourceManager.Instance.AddResource("Rock", 100);
+        ResourceManager.Instance.AddResource("DungeonCoins", 100);
     }
 
     public void LoadTutorial()

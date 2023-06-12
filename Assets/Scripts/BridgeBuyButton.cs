@@ -28,8 +28,17 @@ public class BridgeBuyButton : MonoBehaviour
             string resource = (kingBridge ? "DungeonCoins" : "Tree");
             int resourceAmount = (kingBridge ? 5 : 10);
 
-            if (ResourceManager.Instance.resources[resource] < resourceAmount) return;
-            ResourceManager.Instance.AddResource(resource, -resourceAmount);
+            if (kingBridge)
+            {
+                if (ResourceManager.Instance.resources["Rock"] < 100) return;
+                if (ResourceManager.Instance.resources["DungeonCoins"] < 5) return;
+                ResourceManager.Instance.AddResource("Rock", -100);
+                ResourceManager.Instance.AddResource("DungeonCoins", -5);
+            }
+            else {
+                if (ResourceManager.Instance.resources["Tree"] < 10) return;
+                ResourceManager.Instance.AddResource("Tree", -10);
+            }
 
             bridge.build();
 
