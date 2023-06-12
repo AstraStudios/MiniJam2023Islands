@@ -440,6 +440,9 @@ MonoBehaviour:
   player: {fileID: 7742086974682884292}
   winPanel: {fileID: 1868247232}
   mainPanel: {fileID: 146100402}
+  audioSource: {fileID: 7742086974682884293}
+  winnerClip: {fileID: 8300000, guid: bf550a9545d44442f9184bcab7935ba6, type: 3}
+  playerHealth: {fileID: 0}
 --- !u!1 &146100402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,5 +3385,10 @@ PrefabInstance:
 --- !u!1 &7742086974682884292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5683253225741573732, guid: 9d91dff29be134e6aa37335e77e2ef68, type: 3}
+  m_PrefabInstance: {fileID: 4185406607077031549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &7742086974682884293 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 916769169010542981, guid: 9d91dff29be134e6aa37335e77e2ef68, type: 3}
   m_PrefabInstance: {fileID: 4185406607077031549}
   m_PrefabAsset: {fileID: 0}

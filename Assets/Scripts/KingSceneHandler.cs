@@ -11,6 +11,10 @@ public class KingSceneHandler : GenericSingleton<KingSceneHandler>
     [SerializeField] GameObject player;
     [SerializeField] GameObject winPanel;
     [SerializeField] GameObject mainPanel;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip winnerClip;
+    [SerializeField] Player playerHealth;
+
     Vector2 spawnLoc;
     bool inZone;
 
@@ -29,6 +33,7 @@ public class KingSceneHandler : GenericSingleton<KingSceneHandler>
             room1prefab.SetActive(false);
             Instantiate(bossfightPrefab, new Vector2(0, 0), Quaternion.identity);
             player.transform.position = spawnLoc;
+            playerHealth.health = 100;
         }
     }
 
@@ -49,6 +54,8 @@ public class KingSceneHandler : GenericSingleton<KingSceneHandler>
     {
         winPanel.SetActive(true);
         mainPanel.SetActive(false);
+        audioSource.clip = winnerClip;
+        audioSource.Play();
     }
 
     public void LoadBackToMain()

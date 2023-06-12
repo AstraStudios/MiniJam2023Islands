@@ -768,6 +768,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: King
       objectReference: {fileID: 0}
+    - target: {fileID: 5050167164386519995, guid: 408178e5b9637df4b88ab748909cf14e, type: 3}
+      propertyPath: windTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749890873184943191, guid: 408178e5b9637df4b88ab748909cf14e, type: 3}
+      propertyPath: infinateSight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749890873184943191, guid: 408178e5b9637df4b88ab748909cf14e, type: 3}
+      propertyPath: movementSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

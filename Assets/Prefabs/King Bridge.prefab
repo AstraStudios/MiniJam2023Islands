@@ -827,9 +827,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '5coins
+  m_text: '3 coins
 
-    100 stone'
+    75 stone'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
   m_sharedMaterial: {fileID: -6194402684180319427, guid: 552c5f48b0abc4a13bef31624b1266ec, type: 2}
