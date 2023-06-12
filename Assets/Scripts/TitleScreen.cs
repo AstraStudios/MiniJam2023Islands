@@ -9,12 +9,23 @@ public class TitleScreen : GenericSingleton<TitleScreen>
     [SerializeField] GameObject titlePanel;
     [SerializeField] GameObject titleCam;
     GameObject player;
+
     public bool onTitle = false;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    static void OnAfterSceneLoadRuntimeMethod()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 
     private void Start()
     {
         player = GameObject.Find("Player");
-        SwitchToTitle();
+
+        if (PlayerPrefs.GetInt("loadedTitle", 0) != 1)
+        {
+            SwitchToTitle();
+        }
     }
 
     IEnumerator ShuffleIslands()
@@ -35,7 +46,10 @@ public class TitleScreen : GenericSingleton<TitleScreen>
 
     public void SwitchToTitle()
     {
-        //SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+        // reset
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("loadedTitle", 1);
+
         onTitle = true;
 
         mainPanel.SetActive(false);

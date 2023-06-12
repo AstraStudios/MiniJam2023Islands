@@ -11,7 +11,7 @@ public class ResourceManager : GenericSingleton<ResourceManager>
     void Start()
     {
         LoadResources();
-        UImanager.Instance.DisplayResources(PlayerPrefs.GetInt("Wood"), PlayerPrefs.GetInt("Rock"), PlayerPrefs.GetInt("DungeonCoins"));
+        UImanager.Instance.DisplayResources(PlayerPrefs.GetInt("Tree"), PlayerPrefs.GetInt("Rock"), PlayerPrefs.GetInt("DungeonCoins"));
 
         if (resources == null)
         {
@@ -54,7 +54,6 @@ public class ResourceManager : GenericSingleton<ResourceManager>
                 { "Tree", PlayerPrefs.GetInt("Tree") },
                 { "DungeonCoins", PlayerPrefs.GetInt("DungeonCoins") }
             };
-            PlayerPrefs.Save();
         }
     }
 }
